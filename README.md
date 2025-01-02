@@ -23,7 +23,7 @@ The dataset of ChatGPT reviews was loaded and inspected to understand its struct
 - Missing Values Analysis: Identifying and handling missing values.
 - Review Text Analysis: Generating word clouds to visualize the most common words in the reviews.
 
-#Data Preprocessing
+# Data Preprocessing
 1.Combining Columns: Combining review timestamp and review text into a single column for comprehensive analysis.
 2.Lowercasing: Converting all text to lowercase to maintain uniformity.
 3.Removing Punctuation and Emojis: Cleaning the text data by removing unnecessary characters.
@@ -31,36 +31,36 @@ The dataset of ChatGPT reviews was loaded and inspected to understand its struct
 5.Lemmatization: Reducing words to their base forms using SpaCy.
 6.Removing Specific Words: Removing words specific to the app (e.g., 'chatgpt', 'app') to focus on sentiment-bearing words.
 
-#Sentiment Mapping
+# Sentiment Mapping
 The ratings were mapped to sentiments:
 
 - Positive: Ratings > 3
 - Neutral: Ratings = 3
 - Negative: Ratings < 3
 
-#Imbalanced Data Handling
+# Imbalanced Data Handling
 The dataset was imbalanced, with a higher proportion of positive reviews. To address this, Synthetic Minority Over-sampling Technique (SMOTE) was used to balance the dataset by oversampling the minority classes.
 
-#Feature Extraction
+# Feature Extraction
 Text features were extracted using:
 
 - Count Vectorizer: Converting text into a bag-of-words model.
 - TF-IDF Vectorizer: Converting text into term frequency-inverse document frequency (TF-IDF) features.
 
-#Model Training and Evaluation
+# Model Training and Evaluation
 
-#Train-Test Split
+# Train-Test Split
 The data was split into training and testing sets using a 85-15 split with stratification to maintain the distribution of sentiments.
 
-#Multinomial Naive Bayes
+# Multinomial Naive Bayes
 - Training: The Multinomial Naive Bayes model was trained on the processed data.
 - Evaluation: The model's performance was evaluated using classification metrics, achieving a reasonable accuracy.
 
-#Logistic Regression
+# Logistic Regression
 - Training: A logistic regression model was trained on the balanced dataset.
 - Evaluation: The model's performance was evaluated, showing competitive results.
 
-#XGBoost
+# XGBoost
 - Training: The XGBoost model was trained using the DMatrix API for efficient handling of the data.
 - Evaluation: XGBoost achieved the highest accuracy of 92%, demonstrating superior performance compared to other models.
 
